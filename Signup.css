@@ -1,0 +1,91 @@
+
+body{
+	margin: 0;
+	padding: 0;
+	background: url(https://source.unsplash.com/d3bYmnZ0ank);
+	background-size: cover;
+	font-family: sans-serif; 
+}
+.signupBox{
+	position: absolute;
+	top:52%;
+	left:50%;
+	transform: translate(-50%,-50%);
+	width: 390px;
+	height:600px;
+	padding: 20px 40px;
+	box-sizing: border-box;
+	background: rgba(0,0,0,.5);
+
+}
+a{
+	color:white;
+}
+h2{
+	margin:0;
+	padding:0 0 20px;
+	color: #efed40;
+	text-align:center;
+}	
+.signupBox input{
+	padding: 12px, 20px;
+	margin:8px;
+	display: inline;
+	border:none;
+	border-bottom: 1px solid #ccc;
+	box-sizing: border-box;
+	font-size: 16px;
+
+}
+.signupBox input[type="text"],
+.signupBox input[type="password"],
+.signupBox input[type="date"],
+.signupBox input[type="email"]
+{	
+	display:inline-block;
+	border :none;
+	border-bottom: 1px solid #fff;
+	background : transparent;
+	outline: none;
+	height:40px;
+	color:#fff;
+	font-size: 15px;
+	width:100%;
+}
+::placeholder{
+	color:rgba(255,255,255,.5);
+}
+.signupBox input[type="submit"]{
+	border:none;
+	outline:none;
+	width:100%;
+	height:40px;
+	color:black;
+	font-size:15px;
+	background:#efed40;
+	cursor: pointer;
+	border-radius: 20px;
+	font-weight: bold;
+
+}
+.signupBox input[type="submit"]:hover
+{
+	color:#fff;
+	background:#ffed40;
+}
+.link{
+	color:white;
+	text-align: center;
+}
+.container{
+	margin-top:0.5rem; 
+	padding-top:0px;
+	padding-bottom:0px;
+	font-size: 15px;
+	color:#ffed40;
+	text-align: center;
+	background: rgba(0,0,0,.5); 
+}
+#message{
+	font-weight:bold; 
+}

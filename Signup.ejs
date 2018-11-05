@@ -1,0 +1,47 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <title>Sign Up</title>
+    <link href="/CSS/Signup.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div class="signupBox">
+        <h2>Register</h2>
+            <form action="/userSignup" method="POST">
+                <div>
+                    <input type="text" name="f_name" placeholder="Your first name" id="txtFirstname" required>
+                    <input type="text" name="l_name" placeholder="Your last name" id="txtLastname" required>
+                </div>
+                <input type="text" name="mobile_no" placeholder="Contact Number" id="mobNumber" onblur="validateNumber();" required>
+                <input type="email" name="username" placeholder="Your email address" id="txtEmailId" required>
+                <input type="password" name="password" placeholder="Your password" id="txtPassword" onblur="validatePassword();" required>
+                <input type="password"  placeholder="Re-enter your password" id="txtPassword1" onblur="validateRePassword();" required>
+                <input type="date" name="DOB" placeholder="Birthdate" id="txtBirthdate" required>
+                <div>
+                    <input type="radio" name="gender" id="male" value="male" checked> Male
+                    <input type="radio" name="gender" id="female" value="female"> Female
+                    <input type="radio" name="gender" id="other" value="other"> Others
+                </div>
+                <input type="submit" value="Create Account" >
+            </form>
+            <div class="link">Already registered? sign in <a href="/userLogin">here</a> </div>
+    </div>
+
+    <div class="container">
+        <% if(error && error.length>0){%>
+        <div class="alert" role="alert" >
+           <strong><%=error%></strong> 
+        </div>
+        <%}%>
+        <div class="alert" id="message" role="alert" style="display:none;"><strong></strong></div> 
+    </div>     
+      
+    
+    <script type="text/javascript" src="/JS/signup.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    
+</body>
+</html>

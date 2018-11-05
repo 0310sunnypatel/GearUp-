@@ -1,0 +1,97 @@
+body{
+	margin: 0;
+	padding: 0;
+	background: url(https://source.unsplash.com/d3bYmnZ0ank);
+	background-size: cover;
+	font-family: sans-serif; 
+}
+.loginBox{
+	position: absolute;
+	top:50%;
+	left:50%;
+	transform: translate(-50%,-50%);
+	width: 350px;
+	height:420px;
+	padding: 80px 40px;
+	box-sizing: border-box;
+	background: rgba(0,0,0,.5); 
+}
+
+.loginBox a{
+	color:white;
+}
+
+h2{
+	margin:0;
+	padding:0 0 20px;
+	color: #efed40;
+	text-align:center;
+}
+
+.loginHeading{
+	color: #efed40;
+}
+.loginBox p{
+	margin:0;
+	padding:0;
+	font-weight: bold;
+	color : #fff;
+}
+.loginBox input{
+	width: 100%;
+	margin-bottom: 20px;
+
+}
+.loginBox input[type="text"],
+.loginBox input[type="password"]
+{
+	border :none;
+	border-bottom: 1px solid #fff;
+	background : transparent;
+	outline: none;
+	height:40px;
+	color:#fff;
+	font-size: 15px;
+}
+
+::placeholder{
+	color:rgba(255,255,255,.5);
+}
+.loginBox input[type="submit"]{
+	border:none;
+	outline:none;
+	height:40px;
+	color:black;
+	font-size:15px;
+	background:#efed40;
+	cursor: pointer;
+	border-radius: 20px;
+	font-weight: bold;
+}
+.loginBox input[type="submit"]:hover
+{
+	color:#fff;
+	background:#ffed40;
+}
+.link{
+	color:white;
+	text-align: center;
+}
+a{
+	color:white;
+}
+.message{
+	
+}
+.container{
+	margin-top:2rem;
+	font-size: 20px;
+	color:#ffed40;
+	text-align: center;
+	background: rgba(0,0,0,.5); 
+}
+
+
+
+
+

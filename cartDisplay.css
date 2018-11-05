@@ -1,0 +1,100 @@
+body {
+    font-family: 'Merriweather', serif;
+    margin: 0;
+    padding:0px 10px;
+
+}
+
+/* NAVBAR */
+
+.form-inline .form-control{
+	width:400px
+}
+
+.layout{
+	margin-top:75px; 
+}
+
+/* center container in the middle */
+.card1{
+	margin-bottom:15px;
+	margin-left:auto;
+	margin-right: auto;
+	position:relative;
+  	overflow: hidden;
+  	width:60%;
+  	box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+
+h1{
+	font-size:1.75em;
+}
+
+h2{
+	font-size:1.5em;
+}
+
+.images{
+  	width: 290px;
+  	height: 150px;
+  	margin:10px 0px;
+}
+
+img{
+	max-height:100%;
+	max-width:100%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+.product1{
+  	position: absolute;
+  	width: 40%;
+  	height: 100%;
+  	top: 10%;
+  	left: 80%;
+}
+
+.product{
+	margin:10px 0px;
+	text-align:right;
+}
+
+.placeOrder{
+	margin-top:10px;
+	height:60px;
+	width:200px;
+	font-size:20px;
+	font-weight:700;
+	text-transform:uppercase;
+}
+
+.placeOrderDiv{
+	text-align:center;
+}
+
+.removeItem{
+	position:relative;
+	bottom:-25px;
+}
+
+@media screen and (max-width: 540px){
+    .product{
+        text-align:center;
+    }
+}
+
+@media screen and (max-width: 768px){
+	.product{
+        text-align:center;
+    }
+}
+
+@media screen and (max-width: 1023px){
+	.removeItem{
+        position:relative;
+        bottom:0px;
+    }
+}

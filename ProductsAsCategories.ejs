@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Gear Up!</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Merriweather:400,700" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="/CSS/HomePageTry.css">
+	l
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<!-- HEADER -->
+
+	<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+	  <a class="navbar-brand" href="#">Gear Up!</a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
+
+	  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+	    <ul class="navbar-nav mr-auto">
+	      <li class="nav-item">
+	        <a class="nav-link" href="/"><i class="fas fa-home"></i>
+	        	Home <span class="sr-only">(current)</span></a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="/categories">Categories</a>
+	      </li>
+	    </ul>
+	    <form class="form-inline my-2 my-lg-0" action="/searchProducts" method="POST">
+	      <input class="form-control mr-sm-2" id="search" name="search" type="search" placeholder="Search" aria-label="Search">
+	      <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="searchBtn"><i class="fas fa-search"></i></button>
+	    </form>
+	    <ul class="navbar-nav ml-auto">
+	    	<li class="nav-item dropdown">
+	        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	        	<i class="fas fa-user-circle"></i>
+						<%=currentUser.f_name%>
+	        </a>
+	        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+	          <a class="dropdown-item" href="/userCart/<%=currentUser.id%>">Cart</a>
+	          <a class="dropdown-item" href="/yourOrders/<%=currentUser.id%>">Orders</a>
+	          <a class="dropdown-item" href="/logout">Logout</a>
+	        </div>
+	      </li>
+	    </ul>
+	  </div>
+	</nav>
+
+	<div class="container1">
+	<div class="row">
+		<% products.forEach(function(product){ %>
+			<div class="col-lg-4 col-sm-6 col-xs-12 column">
+				<div class="img-thumbnail img-fluid mx-auto d-block">
+					<img src="<%= product.images[0] %>" class="image"> 
+				</div>
+				<div class="itemDetails">
+					<h4 class="productName" style="white-space:nowrap; display:inline-block; overflow:hidden !important; text-overflow: ellipsis;max-width: 400px; font-size: 18px;"><%=product.name %></h4>
+					<div class="row">
+						<div class="col-6">
+							<p>₹<%=product.price %></p>
+						</div>
+						<div class="col-6">
+							<button class="btn btn-primary view" onclick="window.location.href='/productDetails/<%=product.id%>'">View</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		<% }) %>	
+		</div>
+	</div>
+
+
+	<script src="/JS/search.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+	</body>
+	</html>

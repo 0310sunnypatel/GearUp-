@@ -1,0 +1,51 @@
+body{
+    font-family: 'Merriweather', serif;
+    margin: 0;
+    background-image:url(https://source.unsplash.com/kB5DnieBLtM);
+	background-size:cover;
+	background-position:center; 
+}
+
+html{
+	height:100%;
+}
+
+#content{
+			text-align:center;
+			padding-top:17%;
+			text-shadow:0px 4px 3px rgba(0,0,0,0.4),
+						0px 8px 13px rgba(0,0,0,0.1),
+						0px 18px 23px rgba(0,0,0,0.1);
+}
+
+h1{
+			font-weight:700;
+			font-size:5em;
+			color: #efed40;
+}
+
+h3{
+	color:white;
+}
+
+hr{
+			width:900px;
+			border-top:1px solid #f8f8f8;
+			border-bottom:1px solid rgba(0,0,0,0.2);
+}
+
+button{
+	transition: transform .5s;
+	box-shadow: 2px 2px 2px rgba(255,255,255,0.5);
+	
+}
+
+.btn:hover{
+	color: black;
+	transform: scale(1.1);
+	background-color: #efed40;
+}
+
+.websiteName{
+	font-family: 'Satisfy', cursive;
+}

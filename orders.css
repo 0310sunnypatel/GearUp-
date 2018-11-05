@@ -1,0 +1,38 @@
+body {
+    font-family: 'Merriweather', serif;
+    margin: 0;
+    padding:0px 10px;
+    box-sizing: border-box; 
+
+}
+
+/* NAVBAR */
+
+.form-inline .form-control{
+	width:400px
+}
+
+
+/* CONTENT */
+
+.container{
+	margin-top:70px;
+}
+
+.card-footer{
+	text-align: right; 
+}
+
+.orderDate{
+	text-align: right;
+}
+
+.card{
+	margin-bottom: 20px;
+}
+
+.card-header{
+	margin-left: 0px;
+	margin-right: 0px;
+	float: left;
+}
